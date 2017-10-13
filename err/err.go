@@ -1,4 +1,4 @@
-package err
+package simplErr
 
 import (
 	"errors"
@@ -6,8 +6,8 @@ import (
 	"runtime"
 )
 
-//NewErr new an err
-func NewErr(description string) error {
+//New new an err
+func New(description string) error {
 	pc, _, line, _ := runtime.Caller(1)
 	fun := runtime.FuncForPC(pc)
 	funcName := fun.Name()
